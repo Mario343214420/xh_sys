@@ -23,7 +23,7 @@ const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 
 // 通过mongoose连接数据库
-mongoose.connect('mongodb://localhost/local', { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost/xhdatabase', { useNewUrlParser: true })
 	.then(() => {
 		console.log('连接数据库成功!!!');
 		// 只有当连接上数据库后才去启动服务器
