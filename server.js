@@ -7,11 +7,14 @@
  */
 const mongoose = require('mongoose');
 const express = require('express');
+const bodyParser = require('body-parser');
+
 const app = express();
 // var bodyParser = require('body-parser');
 // 声明使用静态中间件
 app.use(express.static('public'));
 // 声明使用解析post请求的中间件
+app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true })); // 请求体参数是: name=tom&pwd=123
 // 声明使用路由器中间件
 const indexRouter = require('./routers');

@@ -7,6 +7,7 @@ const filter = { password: 0, __v: 0 };
 
 // 注册的路由
 router.post('/register', (req, res) => {
+	console.log(req.body);
 	// 读取请求参数数据
 	const { username, password, type } = req.body;
 	// 处理: 判断用户是否已经存在, 如果存在, 返回提示错误的信息, 如果不存在, 保存
